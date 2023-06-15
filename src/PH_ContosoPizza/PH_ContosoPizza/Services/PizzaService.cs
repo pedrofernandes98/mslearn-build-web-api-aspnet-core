@@ -29,8 +29,8 @@ namespace PH_ContosoPizza.Services
 
         public static void Update(Pizza pizza)
         {
-            var index = Pizzas.IndexOf(pizza);
-            //Pizzas.FindIndex(pizza.Id == pizza.Id);
+            var index = Pizzas.FindIndex(p => p.Id == pizza.Id);
+
             if (index <= 0)
                 return;
 
